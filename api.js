@@ -57,6 +57,6 @@ const displyPhoneDetails = details => {
     </div>
     `
     const searchDetails = phoneDetails.value;
-    phoneDetails.value = '';
+    phoneDetails.value = ' ';
     phoneDetails.appendChild(div);
 }
