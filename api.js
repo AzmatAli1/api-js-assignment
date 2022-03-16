@@ -3,7 +3,7 @@ const searchPhone = () => {
     const searchText = searchField.value;
     searchField.value = '';
     console.log(searchText)
-    const url = https://openapi.programming-hero.com/api/phones?search=${searchText}
+    const url = `https://openapi.programming-hero.com/api/phones?search=${searchText}`
     console.log(url);
     fetch(url)
         .then(res => res.json())
@@ -27,14 +27,14 @@ const displySearchResult = phone => {
     })
 }
 const loadPhoneDetail = id => {
-    const url = https://openapi.programming-hero.com/api/phone/${id};
+    const url = `https://openapi.programming-hero.com/api/phone/${id}`
     // console.log(url);
     fetch(url)
         .then(res => res.json())
         // .then(data => console.log(data.data));
-        .then(data => desplyPhoneDetails(data.data));
+        .then(data => displyPhoneDetails(data.data));
 }
-const desplyPhoneDetails = details => {
+const displyPhoneDetails = details => {
     console.log(details);
     const phoneDetails = document.getElementById('phone-details');
     //console.log(details);
@@ -53,5 +53,7 @@ const desplyPhoneDetails = details => {
       <a href="#" class="btn btn-primary">Go somewhere</a>
     </div>
     `
+    const searchDetails = phoneDetails.value;
+    phoneDetails.value = '';
     phoneDetails.appendChild(div);
 }
