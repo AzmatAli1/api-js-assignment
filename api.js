@@ -1,3 +1,4 @@
+// phone info
 const searchPhone = () => {
     const searchField = document.getElementById('search-field');
     const searchText = searchField.value;
@@ -34,6 +35,8 @@ const loadPhoneDetail = id => {
         // .then(data => console.log(data.data));
         .then(data => displyPhoneDetails(data.data));
 }
+
+//phone details
 const displyPhoneDetails = details => {
     console.log(details);
     const phoneDetails = document.getElementById('phone-details');
