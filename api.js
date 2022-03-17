@@ -21,6 +21,9 @@ const displySearchResult = phone => {
                 <img src="${phone.image}" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">${phone.phone_name}</h5>
+                    <div>
+                    <button class ="button-color">Phone Details</button>
+                    </div>
                 </div>
             </div>
              `
